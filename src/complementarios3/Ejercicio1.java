@@ -1,7 +1,9 @@
 package complementarios3;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Ejercicio1 {
     public static void main(String[] args) {
@@ -10,8 +12,10 @@ public class Ejercicio1 {
         palabras.add(null);
         palabras.add("Informatorio");
         palabras.add("");
-        palabras.stream()
-                .filter(Objects::nonNull)
-                .forEach(System.out::println);
+
+        List<String> palabrasFiltradas = palabras.stream()
+                        .filter(Objects::nonNull)
+                        .collect(Collectors.toList());         
+        System.out.println(palabrasFiltradas);
     }
 }

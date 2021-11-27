@@ -2,15 +2,16 @@ package complementarios3;
 
 import java.time.LocalDate;
 
-public class Alumno{
+public class Alumno {
     private String name;
     private String lastName;
     private LocalDate birthDate;
+
     public Alumno(String name, String lastName, LocalDate birthDate) {
         this.name = name;
         this.lastName = lastName;
         this.birthDate = birthDate;
-        }
+    }
 
     public String getName() {
         return name;
