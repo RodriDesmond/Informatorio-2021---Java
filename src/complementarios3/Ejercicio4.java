@@ -6,10 +6,12 @@ import java.util.stream.LongStream;
 public class Ejercicio4 {
     public static void main(String[] args) {
         List<Integer> palabras = List.of(1, 2, 4, 4, 4);
-        palabras.stream()
+        List<Integer> factoriales = palabras.stream()
             .distinct()
             .mapToInt(i -> (int) factorial(i))
-            .forEach(System.out::println);
+            .boxed()
+            .toList();
+        System.out.println(factoriales);
     }
 
     public static long factorial(int n) {
