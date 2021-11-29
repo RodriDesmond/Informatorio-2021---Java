@@ -15,6 +15,7 @@ public class Ejercicio1 {
 
         List<String> palabrasFiltradas = palabras.stream()
                         .filter(Objects::nonNull)
+                        .filter(str -> !str.isEmpty())
                         .collect(Collectors.toList());         
         System.out.println(palabrasFiltradas);
     }
